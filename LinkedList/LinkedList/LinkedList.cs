@@ -10,7 +10,6 @@ namespace LinkedList
     {
         public Node Head;
         public Node Tail;
-
         public LinkedList()
         {
             this.Head = null;
@@ -30,6 +29,28 @@ namespace LinkedList
                 node.next = Head;
                 Head = node;
             }
+        }
+        public void AddStart(int data)
+        {
+            //Create node to add in linked list
+            Node node = new Node(data);
+            //Check if list is empty then new node become head node
+            if (this.Head == null)
+            {
+                this.Head = node;
+            }
+            if(this.Tail == null)
+            {
+                this.Tail = node;
+            }
+            else
+            {
+                //New node location will store the address of previous node 
+                node.next = Head;
+                //node become head
+                Head = node;
+            }
+            Console.WriteLine("Added at starting of linkedlist is " + data);
         }
         public void Display()
         {          
