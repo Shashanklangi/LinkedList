@@ -30,6 +30,28 @@ namespace LinkedList
                 Head = node;
             }
         }
+        public void Append(int data)
+        {
+            //Create node to add in linked list
+            Node node = new Node(data);
+            //Check if list is empty then new node become head node
+            if (this.Head == null)
+            {
+                this.Head = node;
+            }
+            else
+            {
+                //if not then put head in temp variable
+                Node temp = Head;
+               
+                while(temp.next != null)    //check until node next location is null so all node can added
+                {
+                    temp = temp.next;   //temp variable changed so next node can added
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("Added at starting of linkedlist is " + data);
+        }
         public void AddStart(int data)
         {
             //Create node to add in linked list
