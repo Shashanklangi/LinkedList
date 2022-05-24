@@ -6,15 +6,12 @@
         {
             LinkedList list = new LinkedList();
 
-            Node node1 = new Node(56);
-            Node node2 = new Node(30);
-            Node node3 = new Node(70);
-            list.AddNode(node1);
-            list.AddNode(node2);
-            list.AddNode(node3);
+            Console.WriteLine("Append the list");
+            list.Append(56);
+            list.Append(70);
             list.Display();
-            Console.WriteLine("After Appending\n");
-            list.Append(40);
+            Console.WriteLine("Adding Node after Node.");
+            list.AddNodeAfterNode(30, 56);
             list.Display();
         }
     }
