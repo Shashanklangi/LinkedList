@@ -8,10 +8,11 @@
 
             Console.WriteLine("Append the list");
             list.Append(56);
+            list.Append(30);
             list.Append(70);
             list.Display();
-            Console.WriteLine("Adding Node after Node.");
-            list.AddNodeAfterNode(30, 56);
+            Console.WriteLine("\nDelete the first node");
+            list.DeleteFirstNode();
             list.Display();
         }
     }
